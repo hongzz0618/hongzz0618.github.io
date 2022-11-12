@@ -161,3 +161,7 @@ html {
 .cube:hover .out_bottom {
   transform: rotateX(-90deg) translateZ(200px);
 }
+
+#my_audio {
+  display: none;
+}
