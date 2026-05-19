@@ -1,4 +1,4 @@
-# Hong — Backend Software Engineer
+## About
 
 Backend Software Engineer focused on Node.js, TypeScript, AWS, and Terraform.
 
