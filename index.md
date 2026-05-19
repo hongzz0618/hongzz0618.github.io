@@ -30,6 +30,15 @@ I build and document backend architecture labs around serverless APIs, container
 
 A technical reference hub that organizes AWS backend architecture labs, implementation notes, and trade-off documentation.
 
+## How to Read These Projects
+
+These repositories are organized as a small technical map rather than a single application.
+
+1. Start with the AWS Architecture Labs hub for the overall structure and architecture map.
+2. Review the Serverless API Backend project for API Gateway, Lambda, DynamoDB, Terraform, CI, and operational notes.
+3. Review the Containerized Web App project for ECS/Fargate-oriented deployment and container architecture.
+4. Review the GenAI Starter project for practical backend integration patterns around GenAI on AWS.
+
 ## Featured Projects
 
 ### [Serverless API Backend](https://github.com/hongzz0618/aws-serverless-api-backend)
