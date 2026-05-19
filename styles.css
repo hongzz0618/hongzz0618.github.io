@@ -352,13 +352,96 @@ h3 {
     font-size: 0.88rem;
   }
 
+  .hero {
+    padding: 3.35rem 0 2.75rem;
+  }
+
+  h2 {
+    font-size: 1.38rem;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+
+  h3 {
+    font-size: 1.05rem;
+    line-height: 1.28;
+  }
+
+  .hero-stack {
+    margin-bottom: 1rem;
+    font-size: 0.98rem;
+  }
+
+  .hero-summary,
+  .section-body,
+  .project-card p,
+  .highlight p,
+  .section-intro,
+  .focus-list,
+  .reading-list {
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+
+  .section {
+    padding: 2.35rem 0;
+  }
+
+  .section-heading {
+    margin-bottom: 1.15rem;
+  }
+
+  .section-body p {
+    margin-bottom: 0.9rem;
+  }
+
   .hero-actions,
   .button {
     width: 100%;
   }
 
+  .highlight {
+    padding: 1rem;
+  }
+
+  .highlight h2 {
+    font-size: 1.28rem;
+  }
+
+  .tag-list,
+  .mini-tags {
+    gap: 0.45rem;
+  }
+
+  .tag-list li {
+    padding: 0.45rem 0.66rem;
+    font-size: 0.88rem;
+  }
+
+  .mini-tags li {
+    padding: 0.32rem 0.5rem;
+    font-size: 0.78rem;
+  }
+
+  .focus-list {
+    gap: 0.45rem;
+  }
+
+  .reading-list {
+    gap: 0.6rem;
+    margin-top: 0.9rem;
+  }
+
   .project-card,
   .link-grid a {
-    padding: 1rem;
+    padding: 0.95rem;
+  }
+
+  .project-card {
+    gap: 1rem;
+  }
+
+  .project-card h3 {
+    margin-bottom: 0.5rem;
   }
 }
