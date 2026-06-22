@@ -234,22 +234,24 @@ main {
 
 .hero {
   position: relative;
+  isolation: isolate;
 
   min-height: 590px;
   padding: 5.4rem 0 4.7rem;
 
   display: grid;
   grid-template-columns:
-    minmax(0, 1.15fr)
-    minmax(300px, 0.85fr);
+    minmax(0, 1.05fr)
+    minmax(340px, 0.95fr);
+  grid-template-areas: "content visual";
   align-items: center;
-  gap: 3.5rem;
+  gap: 2.5rem;
 }
 
 .hero::after {
   position: absolute;
   right: 0;
-  bottom: 1.4rem;
+  bottom: -1.1rem;
   left: 0;
 
   height: 1px;
@@ -266,6 +268,10 @@ main {
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
+  grid-area: content;
+
   max-width: 720px;
 }
 
@@ -353,13 +359,156 @@ main {
   color: var(--muted);
 }
 
-.hero-panel {
+.hero-visual {
   position: relative;
+  isolation: isolate;
+  grid-area: visual;
+
+  min-height: 560px;
+}
+
+.hero-visual::before {
+  position: absolute;
+  inset: 7% -11% 4% 8%;
+  z-index: -3;
+
+  content: "";
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(115, 185, 230, 0.07) 38%,
+      rgba(126, 201, 174, 0.045) 72%,
+      transparent
+    ),
+    linear-gradient(
+      rgba(170, 183, 198, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(170, 183, 198, 0.028) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    auto,
+    32px 32px,
+    32px 32px;
+
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    rgba(0, 0, 0, 0.8) 24%,
+    rgba(0, 0, 0, 0.9) 76%,
+    transparent
+  );
+}
+
+.hero-portrait {
+  position: absolute;
+  inset: -3.8rem -8rem -3.8rem -1.2rem;
+  z-index: -2;
+
   overflow: hidden;
 
-  align-self: center;
+  opacity: 0.86;
 
-  padding: 1.45rem;
+  -webkit-mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 0, 0, 0.02) 17%,
+      rgba(0, 0, 0, 0.68) 36%,
+      black 74%,
+      transparent 100%
+    );
+  mask-image:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 0, 0, 0.02) 17%,
+      rgba(0, 0, 0, 0.68) 36%,
+      black 74%,
+      transparent 100%
+    );
+}
+
+.hero-portrait::before,
+.hero-portrait::after {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  content: "";
+}
+
+.hero-portrait::before {
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 11, 17, 0.98) 0%,
+      rgba(7, 11, 17, 0.9) 22%,
+      rgba(7, 11, 17, 0.24) 48%,
+      rgba(7, 11, 17, 0.03) 67%,
+      rgba(7, 11, 17, 0.32) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 11, 17, 0.26) 0%,
+      rgba(7, 11, 17, 0.02) 36%,
+      rgba(7, 11, 17, 0.24) 62%,
+      rgba(7, 11, 17, 0.92) 100%
+    );
+}
+
+.hero-portrait::after {
+  z-index: 2;
+
+  background:
+    linear-gradient(
+      rgba(115, 185, 230, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(115, 185, 230, 0.028) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+  mix-blend-mode: screen;
+  opacity: 0.58;
+}
+
+.hero-portrait img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: 71% 60%;
+
+  filter: saturate(0.79) contrast(1.04) brightness(0.74);
+}
+
+.hero-panel {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+  grid-area: visual;
+  justify-self: start;
+
+  align-self: end;
+  width: min(100%, 306px);
+  margin-bottom: 1.65rem;
+  transform: translate(-0.4rem, 7.25rem);
+
+  padding: 1.1rem;
 
   border: 1px solid rgba(126, 201, 174, 0.2);
   border-radius: var(--radius-medium);
@@ -367,14 +516,16 @@ main {
   background:
     linear-gradient(
       145deg,
-      rgba(115, 185, 230, 0.105),
-      rgba(126, 201, 174, 0.045)
+      rgba(115, 185, 230, 0.075),
+      rgba(126, 201, 174, 0.038)
     ),
-    rgba(17, 26, 38, 0.86);
+    rgba(7, 11, 17, 0.6);
 
   box-shadow:
-    var(--shadow-soft),
+    0 18px 48px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+  backdrop-filter: blur(18px);
 }
 
 .hero-panel::before {
@@ -400,38 +551,20 @@ main {
 
 .panel-label {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .map-list {
   position: relative;
 
   display: grid;
-  gap: 0.7rem;
-}
-
-.map-list::before {
-  position: absolute;
-  top: 1.1rem;
-  bottom: 1.1rem;
-  left: 1.1rem;
-
-  width: 1px;
-
-  content: "";
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(115, 185, 230, 0.18),
-      rgba(126, 201, 174, 0.32)
-    );
+  gap: 0.52rem;
 }
 
 .map-item {
   position: relative;
 
-  padding: 0.78rem 0.8rem;
+  padding: 0.56rem 0.64rem;
 
   display: grid;
   grid-template-columns: 2.1rem minmax(0, 1fr);
@@ -441,7 +574,7 @@ main {
   border: 1px solid rgba(170, 183, 198, 0.13);
   border-radius: var(--radius-small);
 
-  background: rgba(7, 11, 17, 0.54);
+  background: rgba(7, 11, 17, 0.58);
 
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.028);
@@ -477,7 +610,7 @@ main {
 .panel-meta {
   position: relative;
 
-  margin-top: 1rem;
+  margin-top: 0.74rem;
 
   display: flex;
   flex-wrap: wrap;
@@ -741,14 +874,107 @@ main {
 @media (max-width: 900px) {
   .hero {
     min-height: auto;
-    padding: 4.4rem 0 3.8rem;
+    padding: 2rem 0 3.8rem;
 
     grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-areas:
+      "visual"
+      "content"
+      "panel";
+    align-items: stretch;
+    gap: 1.35rem;
   }
 
   .hero-content {
     max-width: 760px;
+  }
+
+  .hero-visual {
+    min-height: clamp(230px, 38vw, 320px);
+    margin: 0 -1rem -1.25rem;
+  }
+
+  .hero-visual::before {
+    inset: 4% 0 -18%;
+
+    background:
+      linear-gradient(
+        90deg,
+        rgba(115, 185, 230, 0.08),
+        rgba(126, 201, 174, 0.045),
+        transparent
+      ),
+      linear-gradient(
+        rgba(170, 183, 198, 0.035) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(170, 183, 198, 0.028) 1px,
+        transparent 1px
+      );
+  }
+
+  .hero-portrait {
+    inset: 0 0 -2.8rem;
+
+    opacity: 0.84;
+
+    -webkit-mask-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        black 48%,
+        rgba(0, 0, 0, 0.54) 78%,
+        transparent 100%
+      );
+    mask-image:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.9) 0%,
+        black 48%,
+        rgba(0, 0, 0, 0.54) 78%,
+        transparent 100%
+      );
+  }
+
+  .hero-portrait::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(7, 11, 17, 0.55) 0%,
+        rgba(7, 11, 17, 0.1) 43%,
+        rgba(7, 11, 17, 0.48) 100%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(7, 11, 17, 0.24) 0%,
+        rgba(7, 11, 17, 0.02) 38%,
+        rgba(7, 11, 17, 0.9) 100%
+      );
+  }
+
+  .hero-portrait img {
+    object-position: 53% 32%;
+
+    filter: saturate(0.73) contrast(1.05) brightness(0.69);
+  }
+
+  .hero-panel {
+    grid-area: panel;
+    width: 100%;
+    margin-bottom: 0;
+    transform: none;
+
+    justify-self: stretch;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(115, 185, 230, 0.095),
+        rgba(126, 201, 174, 0.048)
+      ),
+      rgba(7, 11, 17, 0.78);
   }
 
   .two-column {
@@ -787,7 +1013,11 @@ main {
   }
 
   .hero {
-    padding: 3.3rem 0 3rem;
+    padding: 1.9rem 0 3rem;
+  }
+
+  .hero-visual {
+    min-height: 238px;
   }
 
   .section {
@@ -839,14 +1069,27 @@ main {
   }
 
   .hero {
-    gap: 1.3rem;
-    padding: 2.7rem 0 2.4rem;
+    gap: 1.15rem;
+    padding: 1.55rem 0 2.4rem;
+  }
+
+  .hero-visual {
+    min-height: 178px;
+    margin: 0 -0.625rem;
+  }
+
+  .hero-portrait img {
+    object-position: 52% 32%;
   }
 
   .hero-stack {
     margin-bottom: 1rem;
 
     font-size: 0.98rem;
+  }
+
+  .hero-actions {
+    margin-top: 1.55rem;
   }
 
   .hero-summary,
@@ -864,7 +1107,7 @@ main {
   }
 
   .hero-panel {
-    padding: 1rem;
+    padding: 0.9rem;
   }
 
   .panel-label {
@@ -873,15 +1116,25 @@ main {
 
   .map-list {
     gap: 0.55rem;
+    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
   }
 
   .map-item {
-    padding: 0.62rem;
+    min-height: 3rem;
+    padding: 0.5rem;
     gap: 0.6rem;
   }
 
+  .map-item span {
+    width: 1.55rem;
+    height: 1.55rem;
+
+    font-size: 0.64rem;
+  }
+
   .map-item p {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
+    line-height: 1.28;
   }
 
   .panel-meta {
