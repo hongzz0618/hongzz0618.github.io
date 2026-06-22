@@ -1,29 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Backend engineering, AWS architecture labs, and technical references focused on Node.js, TypeScript, AWS, and Terraform.">
-  <meta name="theme-color" content="#0b1120">
+
+  <meta name="description"
+    content="Backend engineering projects focused on Node.js, TypeScript, AWS, Terraform, serverless systems, containers, observability, and cloud architecture.">
+  <meta name="theme-color" content="#0b1119">
+
   <meta property="og:title" content="Hong Zhou | Backend Engineering">
-  <meta property="og:description" content="Backend engineering, AWS architecture labs, and technical references focused on Node.js, TypeScript, AWS, and Terraform.">
+  <meta property="og:description"
+    content="Backend engineering projects focused on Node.js, TypeScript, AWS, Terraform, serverless systems, containers, and cloud architecture.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hongzz0618.github.io/">
+  <meta property="og:site_name" content="Hong Zhou">
+
   <meta name="twitter:card" content="summary">
-  <title>Hong Zhou | Backend Engineering</title>
+
+  <link rel="canonical" href="https://hongzz0618.github.io/">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+
+  <title>Hong Zhou | Backend Engineering</title>
 </head>
+
 <body>
   <header class="site-header">
     <nav class="nav" aria-label="Primary navigation">
-      <a class="brand" href="#top" aria-label="Hong Zhou home">
+      <a class="brand" href="#top" aria-label="Hong Zhou homepage">
         <img class="brand-mark" src="favicon.svg" alt="" width="32" height="32">
         <span class="brand-name">Hong Zhou</span>
       </a>
+
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#hub">Reference Hub</a>
         <a href="#projects">Projects</a>
         <a href="#links">Links</a>
       </div>
@@ -34,42 +45,59 @@
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-content">
         <p class="eyebrow">Backend Software Engineer</p>
+
         <h1 id="hero-title">Hong Zhou</h1>
-        <p class="hero-stack">Node.js / TypeScript / AWS / Terraform</p>
-        <p class="hero-summary">
-          I build and document backend architecture labs around serverless APIs,
-          containerized applications, GenAI starter patterns, observability, CI/CD,
-          and architecture trade-offs.
+
+        <p class="hero-stack">
+          Node.js / TypeScript / AWS / Terraform
         </p>
+
+        <p class="hero-summary">
+          I build backend systems and technical reference projects around
+          serverless APIs, containerized services, infrastructure as code,
+          observability, CI/CD, and architecture trade-offs.
+        </p>
+
         <div class="hero-actions" aria-label="Primary links">
-          <a class="button primary" href="https://github.com/hongzz0618/aws-architecture-labs">AWS Architecture Labs</a>
-          <a class="button secondary" href="https://github.com/hongzz0618">GitHub</a>
+          <a class="button primary" href="#projects">
+            View Featured Projects
+          </a>
+
+          <a class="button secondary" href="https://github.com/hongzz0618">
+            GitHub
+          </a>
         </div>
       </div>
-      <aside class="hero-panel" aria-label="Technical map">
-        <p class="panel-label">Architecture Map</p>
+
+      <aside class="hero-panel" aria-label="Technical focus">
+        <p class="panel-label">Technical Focus</p>
+
         <div class="map-list">
           <div class="map-item">
-            <span>01</span>
-            <p>GitHub Profile</p>
+            <span aria-hidden="true">01</span>
+            <p>Backend Engineering</p>
           </div>
+
           <div class="map-item">
-            <span>02</span>
-            <p>Personal Homepage</p>
+            <span aria-hidden="true">02</span>
+            <p>Serverless APIs</p>
           </div>
+
           <div class="map-item">
-            <span>03</span>
-            <p>AWS Architecture Labs</p>
+            <span aria-hidden="true">03</span>
+            <p>Containerized Services</p>
           </div>
+
           <div class="map-item">
-            <span>04</span>
-            <p>Featured Projects</p>
+            <span aria-hidden="true">04</span>
+            <p>GenAI Integration</p>
           </div>
         </div>
-        <div class="panel-meta">
-          <span>3 Featured Projects</span>
+
+        <div class="panel-meta" aria-label="Main technologies">
           <span>Node.js / TypeScript</span>
           <span>AWS / Terraform</span>
+          <span>CI/CD / Observability</span>
         </div>
       </aside>
     </section>
@@ -77,93 +105,108 @@
     <section id="about" class="section two-column" aria-labelledby="about-title">
       <div>
         <p class="section-label">About</p>
-        <h2 id="about-title">Backend and cloud architecture notes</h2>
-      </div>
-      <div class="section-body">
-        <p>
-          Backend Software Engineer focused on Node.js, TypeScript, AWS, and Terraform.
-        </p>
-        <p>
-          The projects here are learning-oriented architecture references for comparing
-          service choices, implementation boundaries, and operational trade-offs.
-        </p>
-      </div>
-    </section>
 
-    <section class="section stack-section" aria-labelledby="stack-title">
-      <div class="section-heading">
-        <p class="section-label">Core Stack</p>
-        <h2 id="stack-title">Tools and services I use most often</h2>
-      </div>
-      <ul class="tag-list" aria-label="Core stack">
-        <li>Node.js</li>
-        <li>TypeScript</li>
-        <li>AWS</li>
-        <li>Terraform</li>
-        <li>Serverless</li>
-        <li>Containers</li>
-        <li>CI/CD</li>
-        <li>Observability</li>
-      </ul>
-    </section>
-
-    <section class="section two-column" aria-labelledby="focus-title">
-      <div>
-        <p class="section-label">Current Focus</p>
-        <h2 id="focus-title">Architecture topics under active practice</h2>
-      </div>
-      <ul class="focus-list">
-        <li>Backend architecture patterns on AWS</li>
-        <li>Serverless API design</li>
-        <li>Containerized application deployment</li>
-        <li>Infrastructure as Code with Terraform</li>
-        <li>Security, observability, and operational trade-offs</li>
-        <li>GenAI starter backend patterns</li>
-      </ul>
-    </section>
-
-    <section id="hub" class="section highlight" aria-labelledby="hub-title">
-      <div class="section-heading">
-        <p class="section-label">Main Reference Hub</p>
-        <h2 id="hub-title">
-          <a href="https://github.com/hongzz0618/aws-architecture-labs">AWS Backend Architecture Reference Hub</a>
+        <h2 id="about-title">
+          Backend engineering with an architecture mindset
         </h2>
       </div>
-      <p>
-        A technical reference hub that organizes AWS backend architecture labs,
-        implementation notes, and trade-off documentation.
-      </p>
+
+      <div class="section-body">
+        <p>
+          I work mainly with Node.js, TypeScript, AWS, and Terraform,
+          building cloud-backed services and repeatable delivery workflows.
+        </p>
+
+        <p>
+          My technical projects focus on concrete implementation details:
+          request flows, data consistency, infrastructure boundaries,
+          testing, observability, deployment safety, and operational
+          trade-offs.
+        </p>
+      </div>
     </section>
 
-    <section class="section reading-section" aria-labelledby="reading-title">
+    <section class="section snapshot-section" aria-labelledby="snapshot-title">
       <div class="section-heading">
-        <p class="section-label">How to Read These Projects</p>
-        <h2 id="reading-title">A small technical map</h2>
+        <p class="section-label">System Snapshot</p>
+
+        <h2 id="snapshot-title">
+          A compact view of how I build
+        </h2>
       </div>
-      <p class="section-intro">
-        These repositories are organized as a small technical map rather than a single application.
-      </p>
-      <ol class="reading-list">
-        <li>Start with the AWS Architecture Labs hub for the overall structure and architecture map.</li>
-        <li>Review the Serverless API Backend project for API Gateway, Lambda, DynamoDB, Terraform, CI, and operational notes.</li>
-        <li>Review the Containerized Web App project for ECS/Fargate-oriented deployment and container architecture.</li>
-        <li>Review the GenAI Starter project for practical backend integration patterns around GenAI on AWS.</li>
-      </ol>
+
+      <div class="snapshot-grid">
+        <article class="snapshot-item">
+          <p class="snapshot-label">Backend</p>
+          <h3>Node.js and TypeScript</h3>
+          <p>
+            API design, validation, data access, error handling,
+            testing, and service integration.
+          </p>
+        </article>
+
+        <article class="snapshot-item">
+          <p class="snapshot-label">Cloud</p>
+          <h3>AWS managed services</h3>
+          <p>
+            Lambda, API Gateway, DynamoDB, ECS, Fargate,
+            ECR, CloudWatch, IAM, and Bedrock.
+          </p>
+        </article>
+
+        <article class="snapshot-item">
+          <p class="snapshot-label">Infrastructure</p>
+          <h3>Terraform</h3>
+          <p>
+            Modular infrastructure, explicit configuration,
+            validation, permissions, and deployment boundaries.
+          </p>
+        </article>
+
+        <article class="snapshot-item">
+          <p class="snapshot-label">Delivery and operations</p>
+          <h3>CI/CD and observability</h3>
+          <p>
+            Automated checks, packaging, container scanning,
+            structured logs, metrics, alarms, and runtime validation.
+          </p>
+        </article>
+      </div>
     </section>
 
     <section id="projects" class="section" aria-labelledby="projects-title">
       <div class="section-heading">
         <p class="section-label">Featured Projects</p>
-        <h2 id="projects-title">Backend and AWS reference projects</h2>
+
+        <h2 id="projects-title">
+          Selected backend and AWS projects
+        </h2>
+
+        <p class="section-intro">
+          Three projects covering serverless APIs, containerized services,
+          and managed GenAI integration on AWS.
+        </p>
       </div>
+
       <div class="project-grid">
         <article class="project-card">
           <div>
             <p class="project-type">Serverless</p>
-            <h3><a href="https://github.com/hongzz0618/aws-serverless-api-backend">Serverless API Backend</a></h3>
-            <p>API Gateway, Lambda, DynamoDB, Terraform, and CI validation for a small serverless backend reference project.</p>
+
+            <h3>
+              <a href="https://github.com/hongzz0618/aws-serverless-api-backend">
+                AWS Serverless API Backend
+              </a>
+            </h3>
+
+            <p>
+              A TypeScript API using API Gateway, Lambda, DynamoDB,
+              and Terraform, with idempotent writes, optimistic locking,
+              OpenAPI contract validation, CI, and CloudWatch observability.
+            </p>
           </div>
-          <ul class="mini-tags" aria-label="Serverless API Backend technologies">
+
+          <ul class="mini-tags" aria-label="AWS Serverless API Backend technologies">
             <li>API Gateway</li>
             <li>Lambda</li>
             <li>DynamoDB</li>
@@ -174,10 +217,22 @@
         <article class="project-card">
           <div>
             <p class="project-type">Containers</p>
-            <h3><a href="https://github.com/hongzz0618/aws-containerized-web-app">Containerized Web App</a></h3>
-            <p>ECS/Fargate-oriented containerized application architecture with infrastructure, deployment, and operational considerations.</p>
+
+            <h3>
+              <a href="https://github.com/hongzz0618/aws-containerized-web-app">
+                AWS Containerized Web App
+              </a>
+            </h3>
+
+            <p>
+              A TypeScript service running on ECS Fargate behind an
+              Application Load Balancer, with private tasks, autoscaling,
+              ECR releases, image digest pinning, container scanning,
+              and Terraform.
+            </p>
           </div>
-          <ul class="mini-tags" aria-label="Containerized Web App technologies">
+
+          <ul class="mini-tags" aria-label="AWS Containerized Web App technologies">
             <li>ECS</li>
             <li>Fargate</li>
             <li>ALB</li>
@@ -188,10 +243,21 @@
         <article class="project-card">
           <div>
             <p class="project-type">GenAI</p>
-            <h3><a href="https://github.com/hongzz0618/aws-genai-starter">GenAI Starter</a></h3>
-            <p>A starter backend project exploring practical GenAI integration patterns on AWS.</p>
+
+            <h3>
+              <a href="https://github.com/hongzz0618/aws-genai-starter">
+                AWS GenAI Starter
+              </a>
+            </h3>
+
+            <p>
+              A serverless TypeScript backend integrating Amazon Bedrock
+              with API Gateway, Lambda, DynamoDB chat history, scoped IAM,
+              CloudWatch observability, and cost controls.
+            </p>
           </div>
-          <ul class="mini-tags" aria-label="GenAI Starter technologies">
+
+          <ul class="mini-tags" aria-label="AWS GenAI Starter technologies">
             <li>Bedrock</li>
             <li>Lambda</li>
             <li>DynamoDB</li>
@@ -204,18 +270,29 @@
     <section id="links" class="section links-section" aria-labelledby="links-title">
       <div class="section-heading">
         <p class="section-label">Links</p>
-        <h2 id="links-title">Reference points</h2>
+
+        <h2 id="links-title">
+          Find my work and professional profile
+        </h2>
       </div>
+
       <div class="link-grid">
-        <a href="https://github.com/hongzz0618">GitHub</a>
-        <a href="https://github.com/hongzz0618/aws-architecture-labs">AWS Architecture Labs</a>
-        <a href="https://www.linkedin.com/in/hongzz/">LinkedIn</a>
+        <a class="link-card" href="https://github.com/hongzz0618">
+          <span class="link-card-label">Code and project history</span>
+          <span class="link-card-title">GitHub</span>
+        </a>
+
+        <a class="link-card" href="https://www.linkedin.com/in/hongzz/">
+          <span class="link-card-label">Professional experience</span>
+          <span class="link-card-title">LinkedIn</span>
+        </a>
       </div>
     </section>
   </main>
+
   <footer class="site-footer">
-    <p>Built as a simple static homepage with GitHub Pages.</p>
-    <p>Last updated: 2026</p>
+    <p>Hong Zhou · Backend Engineering · 2026</p>
   </footer>
 </body>
+
 </html>
