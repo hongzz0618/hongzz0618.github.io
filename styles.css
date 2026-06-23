@@ -871,6 +871,16 @@ main {
   }
 }
 
+@media (min-width: 901px) and (max-width: 1180px) {
+  .hero-visual::before {
+    inset: 7% 0 4% 8%;
+  }
+
+  .hero-portrait {
+    inset: -3.8rem -1rem -3.8rem -1.2rem;
+  }
+}
+
 @media (max-width: 900px) {
   .hero {
     min-height: auto;
